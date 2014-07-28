@@ -114,6 +114,11 @@ include vendor/eos/config/themes_common.mk
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/eos/overlay/common
 
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # Inherit common product build prop overrides
 -include vendor/eos/config/common_versions.mk
 
