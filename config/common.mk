@@ -96,11 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Busybox
 
-PRODUCT_PACKAGES += \
-    procmem \
-    procrank \
-    su
-
 # Screen recorder package and lib
 PRODUCT_PACKAGES += \
     ScreenRecorder \
