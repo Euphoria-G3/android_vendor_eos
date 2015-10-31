@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/eos/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
+# Copy over added mimetype supported in libcore.net.MimeUtils
+PRODUCT_COPY_FILES += \
+    vendor/eos/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -62,6 +66,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     BluetoothExt \
+    CMSettingsProvider \
     CustomWallpapers \
     Development \
     Eleven \
@@ -126,7 +131,7 @@ ifndef CM_PLATFORM_SDK_VERSION
   # the SDK are released.  It should only be incremented when the APIs for
   # the new release are frozen (so that developers don't write apps against
   # intermediate builds).
-  CM_PLATFORM_SDK_VERSION := 2
+  CM_PLATFORM_SDK_VERSION := 3
 endif
 
 ifndef CM_PLATFORM_REV
